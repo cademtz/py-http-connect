@@ -12,7 +12,7 @@ class ProxyRequest:
         return ProxyRequest(**json.loads(json_str))
 
 class ProxyResponse:
-    def __init__(self, uuid: str, http_code: int, body: str | None=None, error: str | None=None):
+    def __init__(self, uuid: str, http_code: int, body: str=None, error: str=None):
         self.uuid = uuid
         self.http_code = http_code
         self.body = body

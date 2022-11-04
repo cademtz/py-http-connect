@@ -68,7 +68,7 @@ class Client:
         self.write_thread.join(timeout=0)
         self.asyncio_thread.join(timeout=0)
 
-    def _send(self, buf: bytes|str):
+    def _send(self, buf):
         if type(buf) == str:
             buf = buf.encode('utf-8')
         
